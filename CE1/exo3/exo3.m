@@ -9,9 +9,6 @@ G1 = tf([k],[tau1 1]);
 G2 = tf([1],[tau2 1]);
 G = G1*G2;
 
-%nyquist(G);
-
-
 N1 = 20;
 N2 = 200;
 
@@ -26,8 +23,8 @@ figure
 hold on
 bodemag(g_sample_n1/G.NominalValue - 1)
 bodemag(info_n1.W1)
-title("W2 and Ghat/G -1 for 20 samples")
-legend("Ghat/G -1 (20 samples)","W2 (second order)")
+title("$W_2$ and $\hat{G}/G$ -1 for 20 samples",'Interpreter','latex')
+legend("$\hat{G}/G$ -1 (20 samples)","$W_2$ (second order)",'Interpreter','latex')
 
 % convert to multiplicative uncertanty with 200 samples
 g_sample_n2 = usample(G,N2);
@@ -40,8 +37,8 @@ figure
 hold on
 bodemag(g_sample_n2/G.NominalValue - 1)
 bodemag(info_n2.W1)
-title("W2 and Ghat/G -1 for 200 samples")
-legend("Ghat/G -1 (200 samples)","W2 (second order)")
+title("$W_2$ and $\hat{G}/G -1$ for 200 samples",'Interpreter','latex')
+legend("$\hat{G}/G$ -1 (200 samples)","$W_2$ (second order)",'Interpreter','latex')
 
 
 

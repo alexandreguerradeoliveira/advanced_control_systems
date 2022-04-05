@@ -24,7 +24,6 @@ h = nyquistplot(G1,P);
 axis equal; showConfidence(h,2);
 
 %% 4
-
 %data2
 load data2
 Z2 = iddata(y,u,Ts);
@@ -36,8 +35,8 @@ figure(3)
 h = nyquistplot(G2,P);
 axis equal; showConfidence(h,2);
 
-%data3
 
+%data3
 load data3
 Z3 = iddata(y,u,Ts);
 Zd3 = detrend(Z3);
